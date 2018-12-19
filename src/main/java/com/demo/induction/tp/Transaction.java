@@ -33,10 +33,6 @@ public class Transaction {
 		this.amount = amount;
 	}
 
-	public String getNarration() {
-		return narration;
-	}
-
 	public void setNarration(String narration) {
 		this.narration = narration;
 	}
@@ -54,14 +50,5 @@ public class Transaction {
 	@Override
 	public int hashCode() {
 		return Objects.hash(type, amount, narration);
-	}
-
-	@Override
-	public String toString() {
-		return "Transaction{" +
-				"type='" + type + '\'' +
-				", amount=" + amount +
-				", narration='" + narration + '\'' +
-				'}';
 	}
 }

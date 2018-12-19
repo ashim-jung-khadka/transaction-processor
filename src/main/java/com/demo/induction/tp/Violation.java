@@ -27,13 +27,4 @@ public class Violation {
 	public int hashCode() {
 		return Objects.hash(order, property, description);
 	}
-
-	@Override
-	public String toString() {
-		return "Violation{" +
-				"order=" + order +
-				", property='" + property + '\'' +
-				", description='" + description + '\'' +
-				'}';
-	}
 }
