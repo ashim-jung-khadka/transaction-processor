@@ -1,4 +1,4 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.model;
 
 import java.math.BigDecimal;
 import java.util.Objects;

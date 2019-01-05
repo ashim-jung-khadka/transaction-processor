@@ -1,5 +1,6 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.service;
 
+import com.demo.induction.tp.model.Transaction;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

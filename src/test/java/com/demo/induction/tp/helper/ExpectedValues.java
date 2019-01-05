@@ -1,11 +1,16 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.helper;
+
+import com.demo.induction.tp.model.Transaction;
+import com.demo.induction.tp.model.Violation;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.demo.induction.tp.ViolationEnum.*;
+import static com.demo.induction.tp.util.ViolationEnum.EMPTY_TYPE;
+import static com.demo.induction.tp.util.ViolationEnum.INVALID_TYPE;
+import static com.demo.induction.tp.util.ViolationEnum.ZERO_AMOUNT;
 
 /**
  * @author ashimjk on 12/18/2018

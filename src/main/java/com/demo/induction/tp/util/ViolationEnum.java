@@ -1,4 +1,4 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.util;
 
 /**
  * @author ashimjk on 12/18/2018

@@ -1,4 +1,6 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.service;
+
+import com.demo.induction.tp.model.Transaction;
 
 import java.io.BufferedReader;
 import java.io.IOException;

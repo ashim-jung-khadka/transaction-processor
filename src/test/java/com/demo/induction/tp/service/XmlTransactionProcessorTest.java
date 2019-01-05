@@ -1,5 +1,8 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.service;
 
+import com.demo.induction.tp.helper.ExpectedValues;
+import com.demo.induction.tp.model.Transaction;
+import com.demo.induction.tp.model.Violation;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +11,10 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class XmlTransactionProcessorTest {
 

@@ -1,5 +1,7 @@
-package com.demo.induction.tp;
+package com.demo.induction.tp.service;
 
+import com.demo.induction.tp.model.Transaction;
+import com.demo.induction.tp.model.Violation;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.InputStream;
@@ -7,7 +9,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.demo.induction.tp.ViolationEnum.*;
+import static com.demo.induction.tp.util.ViolationEnum.EMPTY_TYPE;
+import static com.demo.induction.tp.util.ViolationEnum.INVALID_TYPE;
+import static com.demo.induction.tp.util.ViolationEnum.ZERO_AMOUNT;
 
 public interface TransactionProcessor {
 
