@@ -33,6 +33,10 @@ public class Transaction {
 		this.amount = amount;
 	}
 
+	public String getNarration() {
+		return narration;
+	}
+
 	public void setNarration(String narration) {
 		this.narration = narration;
 	}

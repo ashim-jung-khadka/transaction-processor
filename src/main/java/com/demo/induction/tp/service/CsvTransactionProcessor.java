@@ -1,13 +1,14 @@
 package com.demo.induction.tp.service;
 
 import com.demo.induction.tp.model.Transaction;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -15,16 +16,14 @@ import java.util.stream.Collectors;
 /**
  * @author ashimjk on 12/18/2018
  */
+@Service
+@Qualifier("csv-processor")
 public class CsvTransactionProcessor implements TransactionProcessor {
 
 	private Logger logger = Logger.getLogger(CsvTransactionProcessor.class.getName());
 
 	private static final String COMMA = ",";
 	private List<Transaction> transactions;
-
-	public CsvTransactionProcessor() {
-		this.transactions = new ArrayList<>();
-	}
 
 	@Override
 	public void importTransactions(InputStream is) {

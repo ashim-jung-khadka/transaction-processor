@@ -31,4 +31,14 @@ interface TransactionProcessor {
 ## Implementation Changes - Version 1.1-SNAPSHOT
 
 - Upgraded to Spring Boot
-- Moving class to their respective package
+- Moved class to their respective package
+- Added TransactionProcessorController to handle request for both csv and xml
+- Added integration test for Controller
+    - CsvTransactionProcessorControllerTest
+    - XmlTransactionProcessorControllerTest
+
+Future Changes :
+- Although there are two api for transaction upload, can simply it one single endpoint.
+- Currently content-type is hardcoded in controller, pass it via configuration.
+- Separate integration and unit testing.
+ 

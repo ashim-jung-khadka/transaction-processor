@@ -85,7 +85,7 @@ public class XmlTransactionProcessorTest {
 		assertTrue(transactionProcessor.isBalanced());
 
 		List<Transaction> transactions = transactionProcessor.getImportedTransactions();
-		assertEquals(5, transactions.size());
+		assertEquals(2, transactions.size());
 
 		List<Violation> violations = transactionProcessor.validate();
 		assertEquals(0, violations.size());

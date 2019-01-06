@@ -1,6 +1,8 @@
 package com.demo.induction.tp.service;
 
 import com.demo.induction.tp.model.Transaction;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -20,18 +22,18 @@ import java.util.logging.Logger;
 /**
  * @author ashimjk on 12/19/2018
  */
+@Service
+@Qualifier("xml-processor")
 public class XmlTransactionProcessor implements TransactionProcessor {
 
 	private Logger logger = Logger.getLogger(XmlTransactionProcessor.class.getName());
 
 	private List<Transaction> transactions;
 
-	public XmlTransactionProcessor() {
-		this.transactions = new ArrayList<>();
-	}
-
 	@Override
 	public void importTransactions(InputStream is) {
+		this.transactions = new ArrayList<>();
+
 		if (is == null) {
 			throw new IllegalArgumentException("transaction must be provided");
 		}
