@@ -36,9 +36,22 @@ interface TransactionProcessor {
 - Added integration test for Controller
     - CsvTransactionProcessorControllerTest
     - XmlTransactionProcessorControllerTest
+- Added Docker Plugin
 
-Future Changes :
-- Although there are two api for transaction upload, can simply it one single endpoint.
-- Currently content-type is hardcoded in controller, pass it via configuration.
-- Separate integration and unit testing.
+#### Create Docker Container
+    mvn clean package
+    mvn dockerfile:build
+    docker run -p 8080:8080 transaction-processor:1.1-SNAPSHOT
+
+#### Pull from Docker Hub
+    docker pull ashimjk/transaction-processor:1.1-SNAPSHOT
+    docker run -p 8080:8080 ashimjk/transaction-processor:1.1-SNAPSHOT
+
+#### Test Endpoints
+    curl -F "file=@src/test/resources/xml/equalBalance.xml" http://localhost:8080/transaction-processor/upload-xml 
+
+##### Future Changes :
+- simplify transaction upload endpoint into single.
+- pass content typevia configuration.
+- separate integration and unit testing.
  
