@@ -39,12 +39,15 @@ interface TransactionProcessor {
 - Added Docker Plugin
 
 #### Create Docker Container
-    mvn clean package
-    mvn dockerfile:build
-    docker run -p 8080:8080 transaction-processor:1.1-SNAPSHOT
+    /* It will build docker image as well */
+    mvn clean install
+    
+    docker run -p 8080:8080 transaction-processor:latest
+    OR
+    docker-compose up
 
 #### Pull from Docker Hub
-https://hub.docker.com/r/ashimjk/transaction-processor
+Link : https://hub.docker.com/r/ashimjk/transaction-processor
     
     docker pull ashimjk/transaction-processor:1.1-SNAPSHOT
     docker run -p 8080:8080 ashimjk/transaction-processor:1.1-SNAPSHOT
@@ -54,6 +57,6 @@ https://hub.docker.com/r/ashimjk/transaction-processor
 
 ##### Future Changes :
 - simplify transaction upload endpoint into single.
-- pass content typevia configuration.
+- pass content type via configuration.
 - separate integration and unit testing.
  

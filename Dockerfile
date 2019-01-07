@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-COPY target/transaction-processor-1.1-SNAPSHOT.jar app.jar
+ARG JAR_FILE
+ADD target/${JAR_FILE} transaction-processor.jar
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/transaction-processor.jar"]
