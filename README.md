@@ -44,6 +44,8 @@ interface TransactionProcessor {
     docker run -p 8080:8080 transaction-processor:1.1-SNAPSHOT
 
 #### Pull from Docker Hub
+https://hub.docker.com/r/ashimjk/transaction-processor
+    
     docker pull ashimjk/transaction-processor:1.1-SNAPSHOT
     docker run -p 8080:8080 ashimjk/transaction-processor:1.1-SNAPSHOT
 
